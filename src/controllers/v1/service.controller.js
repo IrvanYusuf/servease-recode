@@ -2,7 +2,7 @@ const { StatusCodes } = require("http-status-codes");
 const ApiResponse = require("../../utils/response.js");
 const { Service } = require("../../models/service.model");
 const { Review } = require("../../models/review.model");
-const redisClient = require("../../config/redis");
+const { redisClient } = require("../../config/redis");
 const ApiError = require("../../errors/apiError");
 class ServiceController {
   static index = async (req, res) => {
@@ -154,8 +154,9 @@ class ServiceController {
   };
 
   static getPopularServices = async (req, res) => {
+    const redis = await redisClient();
     const cacheKey = "popular_services";
-    const cached = await redisClient.get(cacheKey);
+    const cached = await redis.get(cacheKey);
     const limit = parseInt(req.query.limit) || 10;
     if (cached) {
       console.log(
@@ -179,7 +180,7 @@ class ServiceController {
       .populate("partner_id")
       .populate("category_id");
 
-    await redisClient.setEx(cacheKey, 1800, JSON.stringify(services));
+    await redis.setEx(cacheKey, 1800, JSON.stringify(services));
 
     return ApiResponse.successResponse(
       res,
