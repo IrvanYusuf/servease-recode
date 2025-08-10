@@ -1,9 +1,9 @@
 const { StatusCodes } = require("http-status-codes");
-const ApiResponse = require("@/utils/response.js");
-const { uploadToCloudinary } = require("@/utils/uploadToCloudinary");
-const { Category } = require("@/models/category.model");
-const redisClient = require("@/config/redis");
-const ApiError = require("@/errors/apiError");
+const ApiResponse = require("../../utils/response.js");
+const { uploadToCloudinary } = require("../../utils/uploadToCloudinary");
+const { Category } = require("../../models/category.model");
+const redisClient = require("../../config/redis");
+const ApiError = require("../../errors/apiError");
 class CategoryController {
   static index = async (req, res) => {
     const cacheKey = "categories";

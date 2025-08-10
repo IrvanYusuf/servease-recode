@@ -1,10 +1,10 @@
 const { StatusCodes } = require("http-status-codes");
-const ApiResponse = require("@/utils/response.js");
-const { uploadToCloudinary } = require("@/utils/uploadToCloudinary");
-const { Partner } = require("@/models/partner.model");
-const getPublicIdCloudinary = require("@/utils/getPublicIdCloudinary");
-const ApiError = require("@/errors/apiError");
-const cloudinary = require("@/config/cloudinary");
+const ApiResponse = require("../../utils/response.js");
+const { uploadToCloudinary } = require("../../utils/uploadToCloudinary");
+const { Partner } = require("../../models/partner.model");
+const getPublicIdCloudinary = require("../../utils/getPublicIdCloudinary");
+const ApiError = require("../../errors/apiError");
+const cloudinary = require("../../config/cloudinary");
 
 class PartnerController {
   static index = async (req, res) => {
