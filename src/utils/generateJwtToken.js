@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const { CONFIG } = require("@/config/index.js");
+const { CONFIG } = require("../config/index.js");
 
 /**
  * Generate a JWT token.

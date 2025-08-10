@@ -1,5 +1,5 @@
-const { CONFIG } = require("@/config");
-const cloudinary = require("@/config/cloudinary.js");
+const { CONFIG } = require("../config/index");
+const cloudinary = require("../config/cloudinary.js");
 const streamifier = require("streamifier");
 
 const uploadToCloudinary = ({ buffer }) => {

@@ -1,5 +1,5 @@
-const { CONFIG } = require("@/config");
-const transporter = require("@/config/email");
+const { CONFIG } = require("../config/index");
+const transporter = require("../config/email");
 
 const sendEmailTemplate = async (email, subject, emailTemplate) => {
   try {
