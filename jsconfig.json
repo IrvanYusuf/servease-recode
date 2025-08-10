@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "baseUrl": ".", // root folder proyek
-    "paths": {
-      "@/*": ["src/*"]
-    }
-  },
-  "include": ["src", "app.js"]
-}
