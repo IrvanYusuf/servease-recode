@@ -1,7 +1,7 @@
 const { StatusCodes } = require("http-status-codes");
-const ApiResponse = require("@/utils/response.js");
-const { Address } = require("@/models/address.model");
-const ApiError = require("@/errors/apiError");
+const ApiResponse = require("../../utils/response.js");
+const { Address } = require("../../models/address.model");
+const ApiError = require("../../errors/apiError");
 class AddressController {
   static index = async (req, res, next) => {
     const user_id = req.user.id;

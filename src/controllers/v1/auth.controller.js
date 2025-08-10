@@ -1,21 +1,21 @@
-const { User } = require("@/models/user.model.js");
-const ApiResponse = require("@/utils/response.js");
+const { User } = require("../../models/user.model.js");
+const ApiResponse = require("../../utils/response.js");
 const { StatusCodes } = require("http-status-codes");
 const bcrypt = require("bcryptjs");
-const { SALT_BCRYPT } = require("@/constant/constant.js");
-const generateOtp = require("@/utils/generateOtp.js");
-const generateJwtToken = require("@/utils/generateJwtToken.js");
-const getAppTimezone = require("@/utils/getAppTimezone.js");
-const dayjs = require("@/utils/dayjs.js");
+const { SALT_BCRYPT } = require("../../constant/constant.js");
+const generateOtp = require("../../utils/generateOtp.js");
+const generateJwtToken = require("../../utils/generateJwtToken.js");
+const getAppTimezone = require("../../utils/getAppTimezone.js");
+const dayjs = require("../../utils/dayjs.js");
 
 const {
   mobileEmailTemplateForgotPasswordOtp,
   sendEmailTemplate,
   webEmailTemplateForgotPasswordOtp,
-} = require("@/utils/sendEmailTemplate.js");
+} = require("../../utils/sendEmailTemplate.js");
 
 const crypto = require("crypto");
-const ApiError = require("@/errors/apiError");
+const ApiError = require("../../errors/apiError");
 
 class AuthController {
   static register = async (req, res, next) => {
