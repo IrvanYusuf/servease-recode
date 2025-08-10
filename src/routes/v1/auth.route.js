@@ -1,7 +1,7 @@
 const express = require("express");
-const AuthController = require("@/controllers/v1/auth.controller.js");
-const authMiddleware = require("@/middlewares/auth.middleware.js");
-const validateMiddleware = require("@/middlewares/validate.middleware");
+const AuthController = require("../../controllers/v1/auth.controller.js");
+const authMiddleware = require("../../middlewares/auth.middleware.js");
+const validateMiddleware = require("../../middlewares/validate.middleware");
 const {
   registerSchemaValidation,
   loginSchemaValidation,
@@ -10,7 +10,7 @@ const {
   forgotPasswordValidation,
   resetPasswordValidation,
   resetPasswordValidationWeb,
-} = require("@/validation/auth.validation");
+} = require("../../validation/auth.validation");
 const router = express.Router();
 
 router.post(

@@ -1,10 +1,10 @@
-const upload = require("@/config/multer");
-const BookingController = require("@/controllers/v1/booking.controller");
-const checkFilePresenceHandler = require("@/errors/checkFilePresenceHandler");
-const authMiddleware = require("@/middlewares/auth.middleware");
-cons = require("@/middlewares/auth.middleware");
-const validateMiddleware = require("@/middlewares/validate.middleware");
-const { createBookingSchema } = require("@/validation/booking.validation");
+const upload = require("../../config/multer");
+const BookingController = require("../../controllers/v1/booking.controller");
+const checkFilePresenceHandler = require("../../errors/checkFilePresenceHandler");
+const authMiddleware = require("../../middlewares/auth.middleware");
+cons = require("../../middlewares/auth.middleware");
+const validateMiddleware = require("../../middlewares/validate.middleware");
+const { createBookingSchema } = require("../../validation/booking.validation");
 const express = require("express");
 
 const router = express.Router();

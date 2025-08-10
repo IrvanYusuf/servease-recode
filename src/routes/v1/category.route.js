@@ -1,8 +1,10 @@
-const upload = require("@/config/multer");
-const CategoryController = require("@/controllers/v1/category.controller");
-const checkFilePresenceHandler = require("@/errors/checkFilePresenceHandler");
-const validateMiddleware = require("@/middlewares/validate.middleware");
-const { createCategorySchema } = require("@/validation/category.validation");
+const upload = require("../../config/multer");
+const CategoryController = require("../../controllers/v1/category.controller");
+const checkFilePresenceHandler = require("../../errors/checkFilePresenceHandler");
+const validateMiddleware = require("../../middlewares/validate.middleware");
+const {
+  createCategorySchema,
+} = require("../../validation/category.validation");
 const express = require("express");
 
 const router = express.Router();

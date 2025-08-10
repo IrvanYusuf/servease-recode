@@ -1,10 +1,10 @@
-const ReviewController = require("@/controllers/v1/review.controller");
-const authMiddleware = require("@/middlewares/auth.middleware");
-const validateMiddleware = require("@/middlewares/validate.middleware");
+const ReviewController = require("../../controllers/v1/review.controller");
+const authMiddleware = require("../../middlewares/auth.middleware");
+const validateMiddleware = require("../../middlewares/validate.middleware");
 const {
   createReviewSchema,
   updateReviewSchema,
-} = require("@/validation/review.validation");
+} = require("../../validation/review.validation");
 const express = require("express");
 
 const router = express.Router();

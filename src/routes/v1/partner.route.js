@@ -1,9 +1,9 @@
-const upload = require("@/config/multer");
-const PartnerController = require("@/controllers/v1/partner.controller");
-const checkFilePresenceHandler = require("@/errors/checkFilePresenceHandler");
-const authMiddleware = require("@/middlewares/auth.middleware");
-const validateMiddleware = require("@/middlewares/validate.middleware");
-const { createCompanySchema } = require("@/validation/company.validation");
+const upload = require("../../config/multer");
+const PartnerController = require("../../controllers/v1/partner.controller");
+const checkFilePresenceHandler = require("../../errors/checkFilePresenceHandler");
+const authMiddleware = require("../../middlewares/auth.middleware");
+const validateMiddleware = require("../../middlewares/validate.middleware");
+const { createCompanySchema } = require("../../validation/company.validation");
 const express = require("express");
 
 const router = express.Router();

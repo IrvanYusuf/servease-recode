@@ -1,10 +1,10 @@
-const AddressController = require("@/controllers/v1/address.controller");
-const authMiddleware = require("@/middlewares/auth.middleware");
-const validateMiddleware = require("@/middlewares/validate.middleware");
+const AddressController = require("../../controllers/v1/address.controller");
+const authMiddleware = require("../../middlewares/auth.middleware");
+const validateMiddleware = require("../../middlewares/validate.middleware");
 const {
   createAddressSchema,
   updateAddressSchema,
-} = require("@/validation/address.validation");
+} = require("../../validation/address.validation");
 const express = require("express");
 
 const router = express.Router();

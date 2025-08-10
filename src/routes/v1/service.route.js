@@ -1,6 +1,5 @@
-const upload = require("@/config/multer");
-const ServiceController = require("@/controllers/v1/service.controller");
-const authMiddleware = require("@/middlewares/auth.middleware");
+const ServiceController = require("../../controllers/v1/service.controller");
+const authMiddleware = require("../../middlewares/auth.middleware");
 const express = require("express");
 
 const router = express.Router();

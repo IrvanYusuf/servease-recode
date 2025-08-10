@@ -1,6 +1,6 @@
-const upload = require("@/config/multer");
-const BannerController = require("@/controllers/v1/banner.controller");
-const checkFilePresenceHandler = require("@/errors/checkFilePresenceHandler");
+const upload = require("../../config/multer");
+const BannerController = require("../../controllers/v1/banner.controller");
+const checkFilePresenceHandler = require("../../errors/checkFilePresenceHandler");
 const express = require("express");
 
 const router = express.Router();

@@ -1,7 +1,9 @@
-const UserController = require("@/controllers/v1/user.controller.js");
-const authMiddleware = require("@/middlewares/auth.middleware.js");
-const validateMiddleware = require("@/middlewares/validate.middleware");
-const { updateUserSchemaValidation } = require("@/validation/auth.validation");
+const UserController = require("../../controllers/v1/user.controller.js");
+const authMiddleware = require("../../middlewares/auth.middleware.js");
+const validateMiddleware = require("../../middlewares/validate.middleware");
+const {
+  updateUserSchemaValidation,
+} = require("../../validation/auth.validation");
 const express = require("express");
 
 const router = express.Router();

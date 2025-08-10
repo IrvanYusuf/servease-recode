@@ -1,10 +1,10 @@
-const upload = require("@/config/multer");
-const PaymentMethodController = require("@/controllers/v1/paymentmethod.controller");
-const authMiddleware = require("@/middlewares/auth.middleware");
-const validateMiddleware = require("@/middlewares/validate.middleware");
+const upload = require("../../config/multer");
+const PaymentMethodController = require("../../controllers/v1/paymentmethod.controller");
+const authMiddleware = require("../../middlewares/auth.middleware");
+const validateMiddleware = require("../../middlewares/validate.middleware");
 const {
   createPaymentMethodSchema,
-} = require("@/validation/paymentMethod.validation");
+} = require("../../validation/paymentMethod.validation");
 const express = require("express");
 
 const router = express.Router();
