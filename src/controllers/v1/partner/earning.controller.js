@@ -1,10 +1,10 @@
 const { StatusCodes } = require("http-status-codes");
-const ApiResponse = require("@/utils/response.js");
-const { Booking } = require("@/models/booking.model");
+const ApiResponse = require("../../../utils/response.js");
+const { Booking } = require("../../../models/booking.model");
 const mongoose = require("mongoose");
-const { User } = require("@/models/user.model");
-const ApiError = require("@/errors/apiError");
-const { Withdraw } = require("@/models/withdraw.model");
+const { User } = require("../../../models/user.model");
+const ApiError = require("../../../errors/apiError");
+const { Withdraw } = require("../../../models/withdraw.model");
 
 class EarningController {
   static getEarningsHistory = async (req, res) => {

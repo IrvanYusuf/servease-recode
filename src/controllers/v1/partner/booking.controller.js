@@ -1,10 +1,9 @@
 const { StatusCodes } = require("http-status-codes");
-const ApiResponse = require("@/utils/response.js");
-const { Booking } = require("@/models/booking.model");
-const { TimelineTracker } = require("@/models/timelinetracker.model");
+const ApiResponse = require("../../../utils/response.js");
+const { Booking } = require("../../../models/booking.model");
+const { TimelineTracker } = require("../../../models/timelinetracker.model");
 const moment = require("moment");
 const mongoose = require("mongoose");
-const { User } = require("@/models/user.model");
 class BookingController {
   static index = async (req, res) => {
     const owner_id = req.user.id;

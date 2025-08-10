@@ -1,9 +1,9 @@
-const { Service } = require("@/models/service.model");
-const ApiResponse = require("@/utils/response");
+const { Service } = require("../../../models/service.model");
+const ApiResponse = require("../../../utils/response");
 const {
   uploadToCloudinary,
   uploadMultipleToCloudinary,
-} = require("@/utils/uploadToCloudinary");
+} = require("../../../utils/uploadToCloudinary");
 const { StatusCodes } = require("http-status-codes");
 
 class ServiceController {

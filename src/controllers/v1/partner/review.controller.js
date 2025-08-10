@@ -1,7 +1,5 @@
-const { StatusCodes } = require("http-status-codes");
-const ApiResponse = require("@/utils/response.js");
-const { Review } = require("@/models/review.model");
-const { Booking } = require("@/models/booking.model");
+const ApiResponse = require("../../../utils/response.js");
+const { Booking } = require("../../../models/booking.model");
 const { mongoose } = require("mongoose");
 class ReviewController {
   static index = async (req, res) => {
