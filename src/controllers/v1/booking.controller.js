@@ -1,13 +1,13 @@
 const { StatusCodes } = require("http-status-codes");
-const ApiResponse = require("@/utils/response.js");
-const { Booking } = require("@/models/booking.model");
-const { Service } = require("@/models/service.model");
-const { APP_FEE } = require("@/constant/constant");
-const { uploadToCloudinary } = require("@/utils/uploadToCloudinary");
-const { TimelineTracker } = require("@/models/timelinetracker.model");
-const ApiError = require("@/errors/apiError");
-const { PaymentMethod } = require("@/models/paymentMethod.model");
-const { User } = require("@/models/user.model");
+const ApiResponse = require("../../utils/response.js");
+const { Booking } = require("../../models/booking.model");
+const { Service } = require("../../models/service.model");
+const { APP_FEE } = require("../../constant/constant");
+const { uploadToCloudinary } = require("../../utils/uploadToCloudinary");
+const { TimelineTracker } = require("../../models/timelinetracker.model");
+const ApiError = require("../../errors/apiError");
+const { PaymentMethod } = require("../../models/paymentMethod.model");
+const { User } = require("../../models/user.model");
 class BookingController {
   static index = async (req, res) => {
     try {

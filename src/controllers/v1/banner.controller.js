@@ -1,8 +1,8 @@
 const { StatusCodes } = require("http-status-codes");
-const ApiResponse = require("@/utils/response.js");
-const { Banner } = require("@/models/banner.model");
-const uploadToCloudinary = require("@/utils/uploadToCloudinary");
-const redisClient = require("@/config/redis");
+const ApiResponse = require("../../utils/response.js");
+const { Banner } = require("../../models/banner.model");
+const uploadToCloudinary = require("../../utils/uploadToCloudinary");
+const redisClient = require("../../config/redis");
 class BannerController {
   static index = async (req, res) => {
     const cacheKey = "banners";
