@@ -1,4 +1,3 @@
-require("./src/alias.js");
 const express = require("express");
 const morgan = require("morgan");
 const connectDb = require("./src/database/db.js");
