@@ -12,7 +12,7 @@ const authRoutes = require("./auth.route.js");
 const userRoutes = require("./user.routes.js");
 
 // partner dashboard
-const partnerDashboardRoutes = require("@/routes/v1/partner/index.js");
+const partnerDashboardRoutes = require("./partner/index.js");
 
 const router = express.Router();
 
