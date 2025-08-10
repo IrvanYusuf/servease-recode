@@ -1,10 +1,7 @@
 const { StatusCodes } = require("http-status-codes");
-const ApiResponse = require("@/utils/response.js");
-const {
-  createPaymentMethodSchema,
-} = require("@/validation/paymentMethod.validation");
-const { uploadToCloudinary } = require("@/utils/uploadToCloudinary");
-const { PaymentMethod } = require("@/models/paymentMethod.model");
+const ApiResponse = require("../../utils/response.js");
+const { uploadToCloudinary } = require("../../utils/uploadToCloudinary");
+const { PaymentMethod } = require("../../models/paymentMethod.model");
 class PaymentMethodController {
   static index = async (req, res) => {
     const data = await PaymentMethod.find();

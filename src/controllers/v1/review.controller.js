@@ -1,13 +1,9 @@
 const { StatusCodes } = require("http-status-codes");
-const ApiResponse = require("@/utils/response.js");
-const {
-  createReviewSchema,
-  updateReviewSchema,
-} = require("@/validation/review.validation");
-const { Review } = require("@/models/review.model");
-const { Booking } = require("@/models/booking.model");
-const { Service } = require("@/models/service.model");
-const ApiError = require("@/errors/apiError");
+const ApiResponse = require("../../utils/response.js");
+const { Review } = require("../../models/review.model");
+const { Booking } = require("../../models/booking.model");
+const { Service } = require("../../models/service.model");
+const ApiError = require("../../errors/apiError");
 class ReviewController {
   static index = async (req, res) => {
     const user_id = req.user.id;
