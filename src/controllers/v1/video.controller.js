@@ -2,11 +2,12 @@ const { StatusCodes } = require("http-status-codes");
 const ApiResponse = require("../../utils/response.js");
 const { Video } = require("../../models/video.model");
 const { uploadToCloudinary } = require("../../utils/uploadToCloudinary");
-const redisClient = require("../../config/redis");
+const { redisClient } = require("../../config/redis");
 class VideoController {
   static index = async (req, res) => {
+    const redis = await redisClient();
     const cacheKey = "video-tutorials";
-    const cached = await redisClient.get(cacheKey);
+    const cached = await redis.get(cacheKey);
     if (cached) {
       console.log(
         "🍕 Serving data video tutorials from Redis with key:",
@@ -21,7 +22,7 @@ class VideoController {
       );
     }
     const videos = await Video.find();
-    await redisClient.setEx(cacheKey, 18000, JSON.stringify(videos)); // 1 jam
+    await redis.setEx(cacheKey, 18000, JSON.stringify(videos)); // 1 jam
     return ApiResponse.successResponse(
       res,
       "success get datas",

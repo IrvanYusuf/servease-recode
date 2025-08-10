@@ -2,11 +2,12 @@ const { StatusCodes } = require("http-status-codes");
 const ApiResponse = require("../../utils/response.js");
 const { Banner } = require("../../models/banner.model");
 const uploadToCloudinary = require("../../utils/uploadToCloudinary");
-const redisClient = require("../../config/redis");
+const { redisClient } = require("../../config/redis");
 class BannerController {
   static index = async (req, res) => {
+    const redis = await redisClient();
     const cacheKey = "banners";
-    const cached = await redisClient.get(cacheKey);
+    const cached = await redis.get(cacheKey);
     if (cached) {
       console.log(
         "🍕 Serving data banners from Redis Cache with key:",

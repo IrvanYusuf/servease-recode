@@ -2,12 +2,13 @@ const { StatusCodes } = require("http-status-codes");
 const ApiResponse = require("../../utils/response.js");
 const { uploadToCloudinary } = require("../../utils/uploadToCloudinary");
 const { Category } = require("../../models/category.model");
-const redisClient = require("../../config/redis");
+const { redisClient } = require("../../config/redis");
 const ApiError = require("../../errors/apiError");
 class CategoryController {
   static index = async (req, res) => {
+    const redis = await redisClient();
     const cacheKey = "categories";
-    const cached = await redisClient.get(cacheKey);
+    const cached = await redis.get(cacheKey);
     if (cached) {
       console.log(
         "🍕 Serving data categories from Redis Cache with key:",
@@ -22,7 +23,7 @@ class CategoryController {
       );
     }
     const categories = await Category.find();
-    await redisClient.setEx(cacheKey, 18000, JSON.stringify(categories)); // 1 jam
+    await redis.setEx(cacheKey, 18000, JSON.stringify(categories)); // 1 jam
     return ApiResponse.successResponse(
       res,
       "success get categories",
