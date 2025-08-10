@@ -1,4 +1,4 @@
-const ApiResponse = require("@/utils/response");
+const ApiResponse = require("../utils/response.js");
 const { StatusCodes } = require("http-status-codes");
 const { ValidationError } = require("joi");
 const ApiError = require("./apiError");
