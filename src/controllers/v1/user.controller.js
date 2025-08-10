@@ -1,6 +1,6 @@
-const ApiError = require("@/errors/apiError");
-const { User } = require("@/models/user.model.js");
-const ApiResponse = require("@/utils/response.js");
+const ApiError = require("../../errors/apiError");
+const { User } = require("../../models/user.model.js");
+const ApiResponse = require("../../utils/response.js");
 const bcrypt = require("bcryptjs");
 const { StatusCodes } = require("http-status-codes");
 

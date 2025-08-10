@@ -1,9 +1,9 @@
 const { StatusCodes } = require("http-status-codes");
-const ApiResponse = require("@/utils/response.js");
-const { Service } = require("@/models/service.model");
-const { Review } = require("@/models/review.model");
-const redisClient = require("@/config/redis");
-const ApiError = require("@/errors/apiError");
+const ApiResponse = require("../../utils/response.js");
+const { Service } = require("../../models/service.model");
+const { Review } = require("../../models/review.model");
+const redisClient = require("../../config/redis");
+const ApiError = require("../../errors/apiError");
 class ServiceController {
   static index = async (req, res) => {
     const user_id = req.user.id;
