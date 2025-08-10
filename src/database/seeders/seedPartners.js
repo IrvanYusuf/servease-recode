@@ -2,9 +2,9 @@ require("module-alias/register");
 
 require("dotenv").config();
 const { faker } = require("@faker-js/faker/locale/id_ID");
-const connectDb = require("@/database/db.js");
-const { Partner } = require("@/models/partner.model");
-const { User } = require("@/models/user.model");
+const connectDb = require("../db.js");
+const { Partner } = require("../../models/partner.model");
+const { User } = require("../../models/user.model.js");
 
 const total = process.argv[2] || 10; // jumlah input lewat argumen
 

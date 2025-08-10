@@ -2,11 +2,11 @@ require("module-alias/register");
 
 require("dotenv").config();
 const { faker } = require("@faker-js/faker/locale/id_ID");
-const { Partner } = require("@/models/partner.model");
-const { Category } = require("@/models/category.model");
-const { Service } = require("@/models/service.model");
-const connectDb = require("@/database/db.js");
-const { User } = require("@/models/user.model");
+const { Partner } = require("../../models/partner.model");
+const { Category } = require("../../models/category.model");
+const { Service } = require("../../models/service.model");
+const connectDb = require("../../database/db.js");
+const { User } = require("../../models/user.model");
 
 const jumlah = process.argv[2] || 10;
 

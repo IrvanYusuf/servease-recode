@@ -2,13 +2,13 @@ require("module-alias/register");
 
 require("dotenv").config();
 const { faker } = require("@faker-js/faker/locale/id_ID");
-const { Partner } = require("@/models/partner.model");
-const { Service } = require("@/models/service.model");
-const connectDb = require("@/database/db.js");
-const { User } = require("@/models/user.model");
-const { PaymentMethod } = require("@/models/paymentMethod.model");
-const { APP_FEE } = require("@/constant/constant");
-const { Booking } = require("@/models/booking.model");
+const { Partner } = require("../../models/partner.model");
+const { Service } = require("../../models/service.model");
+const connectDb = require("../../database/db.js");
+const { User } = require("../../models/user.model");
+const { PaymentMethod } = require("../../models/paymentMethod.model");
+const { APP_FEE } = require("../../constant/constant");
+const { Booking } = require("../../models/booking.model");
 
 const jumlah = process.argv[2] || 10;
 

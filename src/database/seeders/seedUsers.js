@@ -4,8 +4,8 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const { faker } = require("@faker-js/faker");
-const { CONFIG } = require("@/config/index.js");
-const { User } = require("@/models/user.model");
+const { CONFIG } = require("../../config/index.js");
+const { User } = require("../../models/user.model.js");
 
 // ambil jumlah dari argument CLI, default 10
 const totalUsers = parseInt(process.argv[2]) || 10;
