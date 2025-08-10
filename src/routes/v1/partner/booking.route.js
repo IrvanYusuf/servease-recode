@@ -1,6 +1,6 @@
-const BookingController = require("@/controllers/v1/partner/booking.controller");
-const authMiddleware = require("@/middlewares/auth.middleware");
 const express = require("express");
+const authMiddleware = require("../../../middlewares/auth.middleware.js");
+const BookingController = require("../../../controllers/v1/partner/booking.controller.js");
 
 const router = express.Router();
 
